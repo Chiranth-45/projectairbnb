@@ -15,7 +15,7 @@
             <!-- //<%= listing.title %> <br /> -->
             <%= listing.description %> <br />
               &#8377;<%= listing.price %> <br />
-                <!-- .toLocaleString("en-IN") -->
+               
                 <%= listing.location %> <br />
                   <%= listing.country %> <br />
           </p>
@@ -29,14 +29,18 @@
         <div class="col-1 mt-3">
           <form action="/listings/<%= listing._id %>?_method=DELETE" method="post">
             <button class="btn btn-danger">Delete</button>
-          </form>
+        </form>
         </div>
+
+       
+      
+
         <hr>
 
         <div class=" col-8 offset-0">
 
           <h5>Leave a Review :</h5>
-          <form action="/listings/<%= listing._id %>/review" method="post" class="needs-validation" novalidate>
+          <form action="/listings/<%= listing._id %>/reviews" method="post" class="needs-validation" novalidate>
             <div>
               <label for="rating" class="form-label">Ratings:</label>
               <input type="range" min="1" max="5" id="rating" name="review[rating]" class="form-range" required>
@@ -71,7 +75,7 @@
                 <p class="card-text">
                   <%= review.rating %> &#9733;
                 </p>
-                <form action="/listings/<%= listing._id %>/review/<%= review._id %>?_method=DELETE" method="post">
+                <form action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE" method="post">
                   <button class="btn btn-sm btn-danger mb-1">Delete</button>
                 </form>
               </div>
@@ -88,53 +92,45 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- //to add a comments part on the show page -->
   <!-- <hr>
    <h4>All Reviews</h4>
    <ul>
-     <% for(review of listing.reviews){ %>
-       <li>
-         <%= review.comment %>,<%= review.rating %>Stars
-       </li>
+    <% for(review of listing.reviews){ %>
+      <li>
+        <%= review.comment %>,<%= review.rating %>Stars
+      </li>
 
-       <% } %>
-   </ul> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <% } %>
+  </ul> -->
 
 
 

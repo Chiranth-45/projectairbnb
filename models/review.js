@@ -1,5 +1,6 @@
 const mongoose=require("mongoose");
 const Schema=mongoose.Schema;
+
 main()
 .then( ()=>{console.log("Connection is succesfull");})
 .catch((err) => console.log(err));
@@ -20,4 +21,5 @@ const reviewSchema=new Schema({
     },
 });
 
-module.exports=mongoose.model("Review",reviewSchema);
+let Review=mongoose.model("Review",reviewSchema);
+module.exports=Review;
